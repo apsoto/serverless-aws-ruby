@@ -1,0 +1,39 @@
+AllCops:
+  Include:
+    - Rakefile
+    - lib/**/*.rb
+  Exclude:
+    - bin/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - node_modules/**/*
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 20
+
+# New Cops, remove after major releases of rubocop to
+# keep config file from growing unneccasarily.
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Style/SlicingWithRange:
+  Enabled: true
