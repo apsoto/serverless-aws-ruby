@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'serverless/ruby/invoke_local'
+require 'serverless/ruby/invoke_function'
 
-RSpec.describe Serverless::Ruby::InvokeLocal do
+RSpec.describe Serverless::Ruby::InvokeFunction do
   let(:function_name) { 'a_function' }
   let(:serverless_yml) do
     <<-YML

@@ -16,8 +16,6 @@ RSpec.describe Serverless::Ruby::HandlerMethod do
     # 'lib/ssai/serverless/create_handler.Ssai::Serverless::CreateHandler.handle'
     # handler.handler_method
     it 'load method from standalone handler file' do
-      subject = described_class.new('handler.handler_method')
-      expect(subject.load_method).to be_kind_of(Method)
       skip
     end
 

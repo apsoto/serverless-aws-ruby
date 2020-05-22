@@ -49,6 +49,6 @@ module Serverless
         # klass = Object.const_get(handler_class)
         # klass.method(handler_method_name)
       end
-end
+    end
   end
 end
