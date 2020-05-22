@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.add_development_dependency 'debase'
   spec.add_development_dependency 'rake', '~> 12.0'
+  spec.add_development_dependency 'redcarpet'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'ruby-debug-ide'

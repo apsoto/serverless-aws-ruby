@@ -11,23 +11,32 @@ It's only focused on AWS Lambda as that's all I have experience with.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile test group:
 
-```ruby
-gem 'serverless-ruby'
-```
+    gem 'serverless-ruby', group: :test
 
-And then execute:
+Typically in a serverless project you are using the [serverless-ruby-package](https://www.npmjs.com/package/serverless-ruby-package), therefore you will run bundler in standalone mode:
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install serverless-ruby
+    $ bundle install --standalone --path vendor/bundle
 
 ## Usage
 
-TODO: Write usage instructions here
+### Invoke Handler Function in Test
+
+```ruby
+require 'test_helper'
+require 'serverless/ruby'
+class HandlerTest < Minitest::Test
+  def test_success_response
+    event = Serverless::Ruby::HttpRequestEvent.new
+    event.path = '/some/path'
+    invoker = Serverless::Ruby::InvokeFunction.new(:my_function, event.to_h)
+    response = invoker.call
+    response_code = (response['statusCode'] || response[:statusCode]).to_i
+    assert_equal(200, response_code)
+  end
+end
+```
 
 ## Development
 
