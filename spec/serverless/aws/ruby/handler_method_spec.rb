@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'serverless/ruby/handler_method'
+require 'serverless/aws/ruby/handler_method'
 
-RSpec.describe Serverless::Ruby::HandlerMethod do
+RSpec.describe Serverless::Aws::Ruby::HandlerMethod do
   context '#load_method' do
     before(:all) do
       # add dummy files to LOAD_PATH

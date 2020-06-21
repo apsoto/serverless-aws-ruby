@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require_relative 'lib/serverless/ruby/version'
+require_relative 'lib/serverless/aws/ruby/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'serverless-ruby'
-  spec.version       = Serverless::Ruby::VERSION
+  spec.name          = 'serverless-aws-ruby'
+  spec.version       = Serverless::Aws::Ruby::VERSION
   spec.authors       = ['Alex Soto']
   spec.email         = ['apsoto@gmail.com']
 
   spec.summary       = 'Enhancements for developing ruby based Serverless Framework project.'
-  spec.homepage      = 'https://github.com/apsoto/serverless-ruby'
+  spec.homepage      = 'https://github.com/apsoto/serverless-aws-ruby'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
   spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/apsoto/serverless-ruby'
+  spec.metadata['source_code_uri'] = 'https://github.com/apsoto/serverless-aws-ruby'
   # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
 
   # Specify which files should be added to the gem when it is released.

@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
-require 'serverless/ruby/version'
+require 'serverless/aws/ruby/version'
 
 module Serverless
-  # rubocop:disable Style/Documentation
-  module Ruby
-    # class Error < StandardError; end
-    # Your code goes here...
+  module Aws
+    # rubocop:disable Style/Documentation
+    module Ruby
+      # class Error < StandardError; end
+      # Your code goes here...
+    end
+    # rubocop:enable Style/Documentation
   end
-  # rubocop:enable Style/Documentation
 end
 
 require_relative './ruby/fake_lambda_context'
