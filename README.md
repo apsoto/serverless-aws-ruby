@@ -1,19 +1,18 @@
-# serverless-ruby
+# serverless-aws-ruby
 
 <p align="center">
-    <a href="https://travis-ci.org/apsoto/serverless-ruby.svg?branch=develop" alt="Build Status">
-        <img src="https://travis-ci.org/apsoto/serverless-ruby.svg?branch=develop" />
+    <a href="https://travis-ci.org/apsoto/serverless-aws-ruby.svg?branch=develop" alt="Build Status">
+        <img src="https://travis-ci.org/apsoto/serverless-aws-ruby.svg?branch=develop" />
     </a>
 </p>
 
-Make developing a ruby based [Serverless](https://www.serverless.com/) project better.  
-It's only focused on AWS Lambda as that's all I have experience with.
+Make testing/developing a ruby/AWS based [Serverless](https://www.serverless.com/) project.  
 
 ## Installation
 
 Add this line to your application's Gemfile test group:
 
-    gem 'serverless-ruby', group: :test
+    gem 'serverless-aws-ruby', group: :test
 
 Typically in a serverless project you are using the [serverless-ruby-package](https://www.npmjs.com/package/serverless-ruby-package), therefore you will run bundler in standalone mode:
 
@@ -25,12 +24,12 @@ Typically in a serverless project you are using the [serverless-ruby-package](ht
 
 ```ruby
 require 'test_helper'
-require 'serverless/ruby'
+require 'serverless/aws/ruby'
 class HandlerTest < Minitest::Test
   def test_success_response
-    event = Serverless::Ruby::HttpRequestEvent.new
+    event = Serverless::Aws::Ruby::HttpRequestEvent.new
     event.path = '/some/path'
-    invoker = Serverless::Ruby::InvokeFunction.new(:my_function, event.to_h)
+    invoker = Serverless::Aws::Ruby::InvokeFunction.new(:my_function, event.to_h)
     response = invoker.call
     response_code = (response['statusCode'] || response[:statusCode]).to_i
     assert_equal(200, response_code)
@@ -46,9 +45,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ### CI
 
-[https://travis-ci.org/github/apsoto/serverless-ruby](https://travis-ci.org/github/apsoto/serverless-ruby)
+[https://travis-ci.org/github/apsoto/serverless-aws-ruby](https://travis-ci.org/github/apsoto/serverless-aws-ruby)
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/apsoto/serverless-ruby.
+Bug reports and pull requests are welcome on GitHub at https://github.com/apsoto/serverless-aws-ruby.
 
